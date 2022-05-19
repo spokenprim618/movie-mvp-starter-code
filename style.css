@@ -1,8 +1,45 @@
 body {
   background-image: url("https://daily.jstor.org/wp-content/uploads/2017/11/popcorn_history_1050x700.jpg");
+  background-repeat: no-repeat;
 }
-.bmorn{
- display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+*{
+  max-height: 400px;
+  padding: 0px;
+  border: 0px;
+
+}
+.searchBar{
+  max-width: 300px;
+}
+.display>.thing>.moviePoster{
+  
+  width:300px;
+  height: 200px;
+}
+.display{
+   display: flex;
+   flex-direction: column;
+   
+}
+.info{
+  width: 600px;
+  height: 200px;
+  flex-direction: column;
+  
+}
+.bio,.releaseDate,.movieTitle,.rating{
+  transform: translateX(300px);
+
+}
+
+.thing{
+  display: flex;
+  flex-direction: column;
+  align-content:space-around;
+  
+}
+
+.display>.thing>.info{
+    transform: translateX(300px);
+
 }

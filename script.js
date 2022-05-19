@@ -11,17 +11,14 @@ fetch(movieapi)
   })
   .then(function (data) {
     console.log(movieapi);
-    for (let i = 0; i <= data.results.length; i++) {
+    for (let i = 0; i <= 17; i++) {
       let posterPath = data.results[i].poster_path;
       console.log(posterPath);
-      $(".movieTitle").append(`<h1>${data.results[i].title}</h1>`);
-      $(".releaseDate").append(`<p>${data.results[i].release_date}</p>`);
-      $(".moviePoster").append("<img src = https://image.tmdb.org/t/p/original/" + posterPath+">");
-      $(".bio").append(`<p>${data.results[i].overview}</p>`);
-      $(".rating").append(`<p>${data.results[i].vote_average}</p>`);
-
+      $(".thing").append(
+        `<div class="moviePoster">`+`<img src = https://image.tmdb.org/t/p/original/${posterPath}></div>`+`<div class"info">`+`<div class="movieTitle">`+`<h1>${data.results[i].title}</h1>`+`</div>`+
+      `<div class="releaseDate">`+`<p>${data.results[i].release_date}</p>`+`</div>`+`<div class = "bio">`+
+      `<p>${data.results[i].overview}</p>`+`</div>`+`<div class ="rating">`+`
+      <p>${data.results[i].vote_average}</p>`+`</div>`+`</div>`);
+      
     }
-
-   
-    
   });
